@@ -1,3 +1,4 @@
+import { Optional } from '../helpers/optional';
 import { Content } from './Content';
 
 export interface NotificationProps {
@@ -9,7 +10,14 @@ export interface NotificationProps {
 }
 
 export class Notification {
-  constructor(private props: NotificationProps) {}
+  private props: NotificationProps;
+
+  constructor(props: Optional<NotificationProps, 'createdAt'>) {
+    this.props = {
+      ...props,
+      createdAt: props.createdAt ?? new Date(),
+    };
+  }
 
   get recipientId(): string {
     return this.props.recipientId;
