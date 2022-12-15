@@ -1,8 +1,8 @@
 import { Module } from '@nestjs/common';
-import { NotificationController } from './infra/http/notification.controller';
 import { DatabaseModule } from './infra/database/database.module';
+import { HttpModule } from './infra/http/http.module';
 
 @Module({
-  imports: [NotificationController, DatabaseModule],
+  imports: [HttpModule, DatabaseModule],
 })
 export class AppModule {}
