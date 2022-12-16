@@ -1,6 +1,6 @@
-import { Body, Controller, Injectable, Post } from '@nestjs/common';
-import { Notification } from 'src/application/entities/Notification';
-import { SendNotification } from 'src/application/use-cases/send-notification';
+import { Body, Controller, Post } from '@nestjs/common';
+import { Notification } from '@application/entities/Notification';
+import { SendNotification } from '@application/use-cases/send-notification';
 import { CreateNotificationBody } from '../dtos/create-notification-body';
 
 interface CreateNotificationResponse {

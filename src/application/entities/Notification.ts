@@ -1,5 +1,5 @@
 import { randomUUID } from 'node:crypto';
-import { Optional } from '../helpers/optional';
+import { Optional } from '@helpers/optional';
 import { Content } from './Content';
 
 export interface NotificationProps {
